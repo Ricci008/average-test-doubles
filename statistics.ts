@@ -4,7 +4,7 @@ export function mean(numbers: Array<number>): number {
 }
 
 export function median(numbers: Array<number>): number {
-  const sorted = [...numbers].toSorted();
+  const sorted = [...numbers].toSorted((a, b) => a - b);
   const n = sorted.length;
   if (n == 0) {
     return Number.NaN;
